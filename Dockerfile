@@ -6,6 +6,8 @@ RUN yum -y update && yum -y install epel-release \
 RUN curl --silent --location https://rpm.nodesource.com/setup_10.x | bash - \
 	&& yum -y install nodejs
 
+RUN pip install --upgrade pip
+
 RUN pip install ansible-lint
 
 # Default command 
